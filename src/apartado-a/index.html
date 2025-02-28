@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Apartado A</title>
+  </head>
+  <body>
+    <a class="atras-btn" href="../index.html">← Volver a la pantalla inicial</a>
+
+    <form class="buscador-iban">
+      <label for="iban-input">Introduzca el IBAN</label>
+      <div class="buscador-btn">
+        <input type="text" id="iban-input" name="iban" />
+        <button type="submit" aria-label="buscar">🔎</button>
+      </div>
+    </form>
+
+    <div class="resultado-buscador"></div>
+
+    <script type="module" src="main.ts"></script>
+  </body>
+</html>

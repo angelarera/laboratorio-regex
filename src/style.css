@@ -16,52 +16,25 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #242424;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #f4fbff;
 }
 
 h1 {
+  text-align: center;
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 button {
@@ -73,14 +46,86 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  background-color: #7effa7;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+label {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.atras-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  transition: color 0.2s;
+}
+
+.atras-btn:hover {
+  color: #1109ff;
+}
+
+.buscador-btn {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+.buscador-btn input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  min-width: 270px;
+  width: 40dvw;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+
+.formulario-html {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-html textarea {
+  padding: 0.5rem;
+  margin: 1rem 0 0.5rem 0;
+  min-width: 270px;
+  width: 60dvw;
+  resize: vertical;
+  border-radius: 8px;
+}
+
+.resultado-html {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+.resultado-html figure {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 4px solid black;
+  overflow: hidden;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.resultado-html figure img {
+  width: 100%;
+  min-height: 100%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -88,10 +133,25 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
+
   button {
-    background-color: #f9f9f9;
+    background-color: #c8e0ff;
   }
+}
+
+@media (min-width: 768px) {
+
+  .resultado-html {
+    grid-template-columns: repeat(3, 200px);
+    justify-items: center;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .resultado-html {
+    grid-template-columns: repeat(5, 200px);
+  }
+
 }
