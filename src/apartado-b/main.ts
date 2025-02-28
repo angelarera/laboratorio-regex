@@ -1,17 +1,8 @@
-import { extraerSrcDeImg } from "./helpers";
+import { extraerSrcDeImg, crearFigureConImg } from "./helpers";
 
 const formulario = document.querySelector(".formulario-html");
 const htmlIntroducido = document.querySelector("#html-input");
 const resultadoDiv = document.querySelector(".resultado-html");
-
-const crearFigureConImg = (src: string): HTMLElement => {
-  const figure = document.createElement("figure");
-  const img = document.createElement("img");
-  img.src = src;
-
-  figure.appendChild(img);
-  return figure;
-};
 
 if (
   formulario &&
